@@ -52,7 +52,7 @@ public class HelloController {
 		ArrayList<Book> books = testRequest.getListOfAuthorBooks(authorId);
 		bookDao.addBooksToDB(books, authorId, name);
 		List<Book> books1 = bookDao.sortedBookList(minReviews);
-		flash.addAttribute("books", books1);
+		flash.addFlashAttribute("books", books1);
 		return "redirect:/results";
 	}
 	
