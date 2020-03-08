@@ -56,6 +56,7 @@ public class HelloController {
 		return "redirect:/results";
 	}
 	
+	
 	@RequestMapping(path="/results", method=RequestMethod.GET)
 	public String displayResults() {
 		return "results";
