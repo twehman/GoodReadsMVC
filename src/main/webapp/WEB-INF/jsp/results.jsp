@@ -45,7 +45,7 @@ $(document).ready(function () {
     </tr>
   </thead>
   <tbody>
-  <c:forEach items="${books1}" var="book">
+  <c:forEach items="${books}" var="book">
     <tr>
       <td>${book.bookTitle}</td>
       <td>${book.ratingCount}</td>
