@@ -56,7 +56,7 @@ public class APIGetLauncher {
 
 		bookDao.addBooksToDB(books, authorId, authorName);
 		System.out.println();
-		for (Book sortedBook : bookDao.sortedBookList(minReviews)) {
+		for (Book sortedBook : bookDao.sortedBookList(minReviews, authorName)) {
 			System.out.println(sortedBook.getBookTitle());
 		}
 
