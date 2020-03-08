@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 public interface BookDAO {
 	
-	public List<Book> sortedBookList (int minReviews);
+	public List<Book> sortedBookList (int minReviews, String name);
 	
 	public void addBooksToDB (ArrayList<Book> books, long authorId, String authorName);
 	

@@ -22,11 +22,11 @@ public class JdbcBookDao implements BookDAO {
 	
 
 	@Override
-	public List<Book> sortedBookList(int minReviews) {
+	public List<Book> sortedBookList(int minReviews, String name) {
 		
 		List<Book> books = new ArrayList<Book>();
 		
-		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * from books WHERE number_of_ratings > ? ORDER BY average_rating DESC;", minReviews);
+		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * from books WHERE author_name = ? AND number_of_ratings > ? ORDER BY average_rating DESC;", name, minReviews);
 
 		while (results.next()) {
 			books.add(mapRowToBook(results));

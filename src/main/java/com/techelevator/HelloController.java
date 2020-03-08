@@ -51,7 +51,7 @@ public class HelloController {
 		long authorId = new AuthorParser().readConfig("xmlAuthorId.txt");
 		ArrayList<Book> books = testRequest.getListOfAuthorBooks(authorId);
 		bookDao.addBooksToDB(books, authorId, name);
-		List<Book> books1 = bookDao.sortedBookList(minReviews);
+		List<Book> books1 = bookDao.sortedBookList(minReviews, name);
 		flash.addFlashAttribute("books", books1);
 		return "redirect:/results";
 	}
