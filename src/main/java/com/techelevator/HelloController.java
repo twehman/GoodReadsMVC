@@ -53,7 +53,7 @@ public class HelloController {
 		List<Book> books1 = bookDao.sortedBookList(minReviews);
 		System.out.println(books1.size());
 		mapModel.put("books1", books1);
-		return "results";
+		return "redirect:/results";
 	}
 	
 
